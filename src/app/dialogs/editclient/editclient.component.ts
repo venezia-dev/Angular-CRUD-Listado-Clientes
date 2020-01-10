@@ -71,7 +71,6 @@ export class EditclientComponent implements OnInit {
   }
 
   getClient(){
-    console.log(this.data)
     this.editClient.get('name').setValue(this.data.name);
     this.editClient.get('surname').setValue(this.data.surname);
     this.editClient.get('date').setValue(this.data.date);
@@ -85,7 +84,6 @@ export class EditclientComponent implements OnInit {
 
   updateClient(){
     const form = this.editClient;
-    console.log(form.value)
     if(form.valid){
      return this.clientService.updateClient(form.value)
     }

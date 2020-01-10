@@ -118,7 +118,7 @@
 
                     <ng-container matColumnDef="date">
                         <th mat-header-cell *matHeaderCellDef mat-sort-header> F.Nacimiento </th>
-                        <td mat-cell *matCellDef="let clients"> {{clients?.date | date:'dd/MM/yyyy'}} </td>
+                        <td mat-cell *matCellDef="let clients"> {{clients?.date | date}} </td>
                     </ng-container>
 
                     <ng-container matColumnDef="country">

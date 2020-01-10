@@ -103,6 +103,7 @@ export class HomeComponent implements OnInit {
   deleteClient(client: Client) {
     this.dataSource.data = this.dataSource.data.filter((value) => {
       this.clientService.deleteclient(client)
+      this.client = null
       this.refreshClients()
       return value.dni != client.dni;
     });

@@ -21,7 +21,7 @@ Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-
 
 ## Development server
 
-- npm intall
+- npm install
 - Run `ng serve -o`
 
 ## Demo (Heroku)

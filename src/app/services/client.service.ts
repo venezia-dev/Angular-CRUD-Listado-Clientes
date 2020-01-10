@@ -46,13 +46,14 @@ export class ClientService {
       for (let i = 0; i < a.length; i++){
         if (a[i].dni === value.dni){
           clientRef = i;
+          console.log(clientRef)
           break;
         } 
       }
   
-      if (clientRef) {
+      if (clientRef >= 0) {
         a[clientRef] = value;
-        this.toastr.success('Agregado!', 'Cliente');
+        this.toastr.success('Actualizado!', 'Cliente');
         setTimeout(() => {
           localStorage.setItem('ls_clients', JSON.stringify(a));
         }, 500);

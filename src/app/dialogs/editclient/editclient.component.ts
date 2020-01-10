@@ -17,8 +17,6 @@ export class EditclientComponent implements OnInit {
     private clientService: ClientService,
     public dialogRef: MatDialogRef<EditclientComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
-
-    console.log('data', this.data);
   }
 
 
@@ -73,6 +71,7 @@ export class EditclientComponent implements OnInit {
   }
 
   getClient(){
+    console.log(this.data)
     this.editClient.get('name').setValue(this.data.name);
     this.editClient.get('surname').setValue(this.data.surname);
     this.editClient.get('date').setValue(this.data.date);

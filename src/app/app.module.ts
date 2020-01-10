@@ -13,7 +13,7 @@ import { AddclientComponent } from './dialogs/addclient/addclient.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditclientComponent } from './dialogs/editclient/editclient.component';
 import { ToastrModule } from 'ngx-toastr';
-import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { MatTableModule, MatPaginatorModule, MatSortModule, MAT_DATE_LOCALE } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/mate
     ReactiveFormsModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [{provide: MAT_DATE_LOCALE, useValue: 'es-AR'}],
   bootstrap: [AppComponent],
   entryComponents: [AddclientComponent, EditclientComponent]
 })
